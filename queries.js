@@ -6,9 +6,7 @@ var options = {
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/DBPDV';
-
-var conn = 'postgres://postgres:local@localhost:5432/DBPDV';
+var conn = 'postgres://<login>:<password>@localhost:<port>/<database>';
 var db = pgp(conn);
 
 // add query functions
