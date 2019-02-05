@@ -26,8 +26,8 @@ function getAllClients(req, res, next) {
 }
 
 function getSingleClient(req, res, next) {
-  var pupID = parseInt(req.params.id);
-  db.one('select * from cliente where id = $1', pupID)
+  var clientId = parseInt(req.params.id);
+  db.one('select * from cliente where id = $1', clientId)
     .then(function (data) {
       res.status(200)
         .json({
